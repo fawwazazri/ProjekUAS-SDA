@@ -1,0 +1,130 @@
+# Struktur Pohon Decision Tree MBTI
+
+## 🌳 Visualisasi Lengkap Pohon (4 Level, 16 Leaf Nodes)
+
+```
+                                ROOT (Level 1)
+                    "Apakah Anda lebih berenergi saat berinteraksi 
+                            dengan banyak orang?"
+                                    |
+                        ┌───────────┴───────────┐
+                     TIDAK                     YA
+                   (Introvert)             (Extrovert)
+                        |                       |
+                                                
+              ┌─────────┴─────────┐                   ┌─────────┴─────────┐
+           TIDAK                 YA                TIDAK                 YA
+      (Intuition/IN_)      (Sensing/IS_)     (Intuition/EN_)      (Sensing/ES_)
+      "Apakah Anda lebih   "Apakah Anda lebih  "Apakah Anda lebih   "Apakah Anda lebih
+       suka ide-ide         fokus pada fakta    suka ide-ide         fokus pada fakta
+       baru dan             dan detail          baru dan             dan detail
+       kemungkinan          konkret?"           kemungkinan          konkret?"
+       masa depan?"                             masa depan?"
+            |                       |                   |                       |
+                                                        
+    ┌───────┴───────┐       ┌───────┴───────┐   ┌───────┴───────┐       ┌───────┴───────┐
+ TIDAK            YA     TIDAK            YA  TIDAK            YA     TIDAK            YA
+(INF_)          (INT_)   (ISF_)          (IST_) (ENF_)          (ENT_)  (ESF_)          (EST_)
+"Dampak         "Kritis  "Harmoni        "Logika "Dampak         "Kritis "Harmoni        "Logika
+emosional"      analitis" perasaan"      objektif" emosional"      analitis" perasaan"      objektif"
+     |              |         |              |       |              |         |              |
+
+┌────┴────┐  ┌────┴────┐ ┌────┴────┐  ┌────┴────┐ ┌────┴────┐  ┌────┴────┐ ┌────┴────┐  ┌────┴────┐
+T      Y   T      Y    T      Y    T      Y    T      Y    T      Y    T      Y    T      Y
+│      │   │      │    │      │    │      │    │      │    │      │    │      │    │      │
+INFP  INFJ INTP  INTJ  ISFP  ISFJ  ISTP  ISTJ  ENFP  ENFJ  ENTP  ENTJ  ESFP  ESFJ  ESTP  ESTJ
+```
+
+## 📊 Breakdown Per Level
+
+### **LEVEL 1: Ekstrovert vs Introvert (E/I)**
+```
+ROOT: "Apakah Anda lebih berenergi saat berinteraksi dengan banyak orang?"
+├── TIDAK → Introvert (I)
+└── YA → Extrovert (E)
+```
+
+### **LEVEL 2: Sensing vs Intuition (S/N)**
+```
+Introvert Branch:
+├── Introvert + Sensing (IS_)
+│   └── "Apakah Anda lebih fokus pada fakta dan detail konkret?"
+└── Introvert + Intuition (IN_)
+    └── "Apakah Anda lebih suka ide-ide baru dan kemungkinan masa depan?"
+
+Extrovert Branch:
+├── Extrovert + Sensing (ES_)
+│   └── "Apakah Anda lebih fokus pada fakta dan detail konkret?"
+└── Extrovert + Intuition (EN_)
+    └── "Apakah Anda lebih suka ide-ide baru dan kemungkinan masa depan?"
+```
+
+### **LEVEL 3: Thinking vs Feeling (T/F)**
+```
+IS Branch:
+├── IST_ → "Apakah Anda membuat keputusan berdasarkan logika objektif?"
+└── ISF_ → "Apakah Anda lebih mengutamakan harmoni dan perasaan orang lain?"
+
+IN Branch:
+├── INT_ → "Apakah Anda cenderung kritis dan analitis dalam mengambil keputusan?"
+└── INF_ → "Apakah Anda lebih mempertimbangkan dampak emosional dari keputusan?"
+
+ES Branch:
+├── EST_ → "Apakah Anda membuat keputusan berdasarkan logika objektif?"
+└── ESF_ → "Apakah Anda lebih mengutamakan harmoni dan perasaan orang lain?"
+
+EN Branch:
+├── ENT_ → "Apakah Anda cenderung kritis dan analitis dalam mengambil keputusan?"
+└── ENF_ → "Apakah Anda lebih mempertimbangkan dampak emosional dari keputusan?"
+```
+
+### **LEVEL 4: Judging vs Perceiving (J/P) - LEAF NODES**
+```
+ISTJ ← IST + YA (Judging)      |  ISTP ← IST + TIDAK (Perceiving)
+ISFJ ← ISF + YA (Judging)      |  ISFP ← ISF + TIDAK (Perceiving)
+INTJ ← INT + YA (Judging)      |  INTP ← INT + TIDAK (Perceiving)
+INFJ ← INF + YA (Judging)      |  INFP ← INF + TIDAK (Perceiving)
+ESTJ ← EST + YA (Judging)      |  ESTP ← EST + TIDAK (Perceiving)
+ESFJ ← ESF + YA (Judging)      |  ESFP ← ESF + TIDAK (Perceiving)
+ENTJ ← ENT + YA (Judging)      |  ENTP ← ENT + TIDAK (Perceiving)
+ENFJ ← ENF + YA (Judging)      |  ENFP ← ENF + TIDAK (Perceiving)
+```
+
+## 🎯 Path Examples (Root ke Leaf)
+
+### Contoh Path untuk INTJ:
+```
+ROOT → TIDAK (Introvert) 
+     → TIDAK (Intuition/IN_) 
+     → YA (Thinking/INT_) 
+     → YA (Judging) 
+     → INTJ ✅
+```
+
+### Contoh Path untuk ESFP:
+```
+ROOT → YA (Extrovert) 
+     → YA (Sensing/ES_) 
+     → TIDAK (Feeling/ESF_) 
+     → TIDAK (Perceiving) 
+     → ESFP ✅
+```
+
+### Contoh Path untuk INFP:
+```
+ROOT → TIDAK (Introvert) 
+     → TIDAK (Intuition/IN_) 
+     → TIDAK (Feeling/INF_) 
+     → TIDAK (Perceiving) 
+     → INFP ✅
+```
+
+## 📋 Semua 16 Leaf Nodes (Hasil Akhir)
+
+**Introvert Types:**
+- ISTJ, ISTP, ISFJ, ISFP
+- INTJ, INTP, INFJ, INFP
+
+**Extrovert Types:**
+- ESTJ, ESTP, ESFJ, ESFP  
+- ENTJ, ENTP, ENFJ, ENFP
