@@ -1,2 +1,2 @@
 Projek UAS Mata Kuliah Struktur Data dan Algoritma:
-Klasifikasi Tes MBTI dengan menggunakan Decision Tree dan Machine Learning Classification
+Klasifikasi Tes MBTI dengan Menggabungkan Decision Tree dan Metode Skoring
